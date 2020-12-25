@@ -7,6 +7,7 @@ from flask import (
     jsonify,
     request,
     redirect)
+from waitress import serve
 
 #################################################
 # Flask Setup
@@ -77,4 +78,4 @@ def pals():
 
 
 if __name__ == "__main__":
-    app.run()
+    serve(app)
